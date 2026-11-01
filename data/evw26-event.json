@@ -1,0 +1,2277 @@
+{
+  "id": "evw26-event",
+  "campaignId": "evw26",
+  "surface": "HOME",
+  "priority": 100,
+  "title": "EV World 2026",
+  "subtitle": "Event stories",
+  "locale": "en-GB",
+  "cover": {
+    "url": "https://www.evworld.ae/assets/logos/Ev-logo.png",
+    "width": 1200,
+    "height": 630,
+    "alt": "EV World 2026"
+  },
+  "live": {
+    "from": "2026-11-10T10:00:00+04:00",
+    "until": "2026-11-12T18:00:00+04:00"
+  },
+  "theme": {
+    "colors": {}
+  },
+  "defaults": {
+    "durationMs": 7000,
+    "header": {
+      "style": "PLAIN",
+      "logo": {
+        "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67b3fec5184a4749319ef8ed_Logo%20dark.svg",
+        "width": 130,
+        "height": 34,
+        "alt": "Zynetic",
+        "mime": "image/svg+xml"
+      }
+    }
+  },
+  "frames": [
+    {
+      "id": "04-invite",
+      "templateId": "HERO_MEDIA",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "PRE",
+      "title": "You're invited",
+      "availability": {
+        "from": "2026-10-31T00:00:00+04:00",
+        "until": "2026-11-09T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Your invitation",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "You're invited\nto EV World."
+        },
+        {
+          "type": "IMAGE",
+          "marginTop": 56,
+          "width": 936,
+          "height": 490,
+          "shape": "ROUNDED",
+          "cornerRadius": 32,
+          "fit": "FIT",
+          "background": "paper",
+          "border": "hair",
+          "image": {
+            "url": "https://www.evworld.ae/assets/logos/Ev-logo.png",
+            "width": 1200,
+            "height": 630,
+            "alt": "EV World 2026",
+            "critical": true
+          }
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "TEXT",
+          "style": "LEDE",
+          "text": "Meet the team and see the F1 and Z1 chargers at **Booth C‑09**, Dubai World Trade Centre."
+        },
+        {
+          "type": "CTA_GROUP",
+          "id": "cta-invite-save",
+          "marginTop": 36,
+          "buttons": [
+            {
+              "label": "Save the date",
+              "style": "PRIMARY",
+              "action": {
+                "type": "ADD_TO_CALENDAR",
+                "title": "Zynetic at EV World 2026",
+                "start": "2026-11-10T10:00:00+04:00",
+                "end": "2026-11-12T18:00:00+04:00",
+                "location": "Dubai World Trade Centre, Booth C-09",
+                "analytics": {
+                  "name": "cta_save_the_date"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Dubai World Trade Centre, 10–12 November 2026",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "05-rfid-card",
+      "templateId": "HERO_SPEC",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "PRE",
+      "title": "Free RFID card",
+      "availability": {
+        "from": "2026-10-31T00:00:00+04:00",
+        "until": "2026-11-12T18:00:00+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "art": [
+        {
+          "type": "DISC",
+          "x": 500,
+          "y": 760,
+          "w": 760,
+          "h": 760,
+          "color": "pale",
+          "pin": "BOTTOM"
+        },
+        {
+          "type": "IMAGE",
+          "x": 600,
+          "y": 780,
+          "w": 441,
+          "h": 700,
+          "rotation": -10,
+          "fit": "FIT",
+          "align": "CENTER",
+          "pin": "BOTTOM",
+          "image": {
+            "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/696e3b500e0fb6073236d434_2%20X%20RFID%20Cards.png",
+            "width": 659,
+            "height": 672,
+            "alt": "Zynetic RFID card, front and back",
+            "critical": true,
+            "decorative": true
+          }
+        }
+      ],
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Your free\nRFID card.",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "LEDE",
+          "maxWidth": 560,
+          "marginTop": 36,
+          "text": "Tap to charge at any Zynetic charger. Collect yours at the booth."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "width": 540,
+          "children": [
+            {
+              "type": "KV_LIST",
+              "variant": "STACKED",
+              "rows": [
+                {
+                  "label": "Where",
+                  "value": "Booth C‑09"
+                },
+                {
+                  "label": "When",
+                  "value": "10–12 November 2026"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CTA_GROUP",
+          "id": "cta-rfid-open",
+          "marginTop": 36,
+          "buttons": [
+            {
+              "label": "Activate your card",
+              "style": "PRIMARY",
+              "action": {
+                "type": "DEEP_LINK",
+                "uri": "zynetic://open/promotionalCard"
+              }
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Dubai World Trade Centre, 10–12 November 2026",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "11-find-us",
+      "templateId": "INFOGRAPHIC_CARD",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "PRE",
+      "title": "Find us",
+      "availability": {
+        "from": "2026-10-31T00:00:00+04:00",
+        "until": "2026-11-12T18:00:00+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Find us",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "size": 92,
+          "text": "Hall C,\nBooth C‑09."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "marginTop": 48,
+          "children": [
+            {
+              "type": "IMAGE",
+              "height": 420,
+              "fit": "FIT",
+              "image": {
+                "url": "https://commons.wikimedia.org/w/thumb.php?f=Convention_Gate_BC7A0052.jpg&w=1620",
+                "width": 1620,
+                "height": 1080,
+                "alt": "Dubai World Trade Centre, Convention Gate",
+                "critical": true
+              }
+            },
+            {
+              "type": "TEXT",
+              "style": "NOTE",
+              "marginTop": 16,
+              "text": "Illustrative hall layout, not to scale."
+            },
+            {
+              "type": "KV_LIST",
+              "variant": "SPLIT",
+              "marginTop": 16,
+              "rows": [
+                {
+                  "label": "Venue",
+                  "value": "Dubai World Trade Centre"
+                },
+                {
+                  "label": "Booth",
+                  "value": "C‑09"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Dubai World Trade Centre, 10–12 November 2026",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "14-day-1-open",
+      "templateId": "DAY_OPENER",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 1 opener",
+      "availability": {
+        "from": "2026-11-10T00:00:00+04:00",
+        "until": "2026-11-10T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "LIVE_BADGE",
+          "label": "Live from EV World 2026",
+          "marginTop": 64
+        },
+        {
+          "type": "DAY_PROGRESS",
+          "word": "Day",
+          "current": 1,
+          "total": 3,
+          "suffix": "of 3",
+          "marginTop": 40
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "children": [
+            {
+              "type": "KV_LIST",
+              "variant": "SPLIT",
+              "rows": [
+                {
+                  "label": "Date",
+                  "value": "Tuesday 10 November"
+                },
+                {
+                  "label": "Doors",
+                  "value": "10:00–18:00"
+                },
+                {
+                  "label": "Find us",
+                  "value": "Booth C‑09"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "14-day-2-open",
+      "templateId": "DAY_OPENER",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 2 opener",
+      "availability": {
+        "from": "2026-11-11T00:00:00+04:00",
+        "until": "2026-11-11T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "LIVE_BADGE",
+          "label": "Live from EV World 2026",
+          "marginTop": 64
+        },
+        {
+          "type": "DAY_PROGRESS",
+          "word": "Day",
+          "current": 2,
+          "total": 3,
+          "suffix": "of 3",
+          "marginTop": 40
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "children": [
+            {
+              "type": "KV_LIST",
+              "variant": "SPLIT",
+              "rows": [
+                {
+                  "label": "Date",
+                  "value": "Wednesday 11 November"
+                },
+                {
+                  "label": "Doors",
+                  "value": "10:00–18:00"
+                },
+                {
+                  "label": "Find us",
+                  "value": "Booth C‑09"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "14-day-3-open",
+      "templateId": "DAY_OPENER",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 3 opener",
+      "availability": {
+        "from": "2026-11-12T00:00:00+04:00",
+        "until": "2026-11-12T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "LIVE_BADGE",
+          "label": "Live from EV World 2026",
+          "marginTop": 64
+        },
+        {
+          "type": "DAY_PROGRESS",
+          "word": "Day",
+          "current": 3,
+          "total": 3,
+          "suffix": "of 3",
+          "marginTop": 40
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "children": [
+            {
+              "type": "KV_LIST",
+              "variant": "SPLIT",
+              "rows": [
+                {
+                  "label": "Date",
+                  "value": "Thursday 12 November"
+                },
+                {
+                  "label": "Doors",
+                  "value": "10:00–18:00"
+                },
+                {
+                  "label": "Find us",
+                  "value": "Booth C‑09"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "15-live-photo",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Live, one photo",
+      "availability": {
+        "from": "2026-11-10T10:00:00+04:00",
+        "until": "2026-11-12T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "fit": "CROP",
+        "align": "CENTER",
+        "image": {
+          "url": "https://commons.wikimedia.org/w/thumb.php?f=Dubai_World_Trade_Centre_interior.jpg&w=1620",
+          "width": 1620,
+          "height": 2160,
+          "alt": "Inside Dubai World Trade Centre",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "LIVE_BADGE",
+              "label": "Live from EV World 2026"
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "marginTop": 24,
+              "text": "Doors are open at Booth C‑09"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "Come and try the F1 fast charger."
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16-live-two-photos",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Live, two photos",
+      "availability": {
+        "from": "2026-11-10T10:00:00+04:00",
+        "until": "2026-11-12T23:59:59+04:00"
+      },
+      "background": {
+        "type": "COLLAGE",
+        "gap": 4,
+        "gapColor": "#FFFFFF",
+        "cells": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1080,
+            "h": 958,
+            "image": {
+              "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8d2ca4199135e588b_Ramada%20Deira.jpg",
+              "width": 568,
+              "height": 622,
+              "alt": "Zynetic 120 kW DC charger at Ramada Deira",
+              "critical": true
+            }
+          },
+          {
+            "x": 0,
+            "y": 962,
+            "w": 1080,
+            "h": 958,
+            "image": {
+              "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67c84d0b8610f1a2c8ef9919_Teams%20image.png",
+              "width": 2496,
+              "height": 938,
+              "alt": "The Zynetic team"
+            }
+          }
+        ]
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "LIVE_BADGE",
+              "label": "Live from EV World 2026"
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "marginTop": 24,
+              "text": "A busy first morning"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "Demos run every hour at the booth."
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17-live-three-photos",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Live, three photos",
+      "availability": {
+        "from": "2026-11-10T10:00:00+04:00",
+        "until": "2026-11-12T23:59:59+04:00"
+      },
+      "background": {
+        "type": "COLLAGE",
+        "gap": 4,
+        "gapColor": "#FFFFFF",
+        "cells": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1080,
+            "h": 1100,
+            "image": {
+              "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67c84d0b8610f1a2c8ef9919_Teams%20image.png",
+              "width": 2496,
+              "height": 938,
+              "alt": "The Zynetic team",
+              "critical": true
+            }
+          },
+          {
+            "x": 0,
+            "y": 1104,
+            "w": 538,
+            "h": 816,
+            "image": {
+              "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8b4e19c3d717aef1a_Ramada%20Barsha%20Heights.jpg",
+              "width": 568,
+              "height": 622,
+              "alt": "Zynetic charger at Ramada Barsha Heights"
+            }
+          },
+          {
+            "x": 542,
+            "y": 1104,
+            "w": 538,
+            "h": 816,
+            "image": {
+              "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad850fe167879e9f6aa_Al%20Owais%20Tower%20Al%20Barsha%201.jpg",
+              "width": 568,
+              "height": 622,
+              "alt": "Zynetic charger at Al Owais Tower, Al Barsha"
+            }
+          }
+        ]
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "LIVE_BADGE",
+              "label": "Live from EV World 2026"
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "marginTop": 24,
+              "text": "A full house for the F1 demo"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18-goodies",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Goodies",
+      "availability": {
+        "from": "2026-11-10T10:00:00+04:00",
+        "until": "2026-11-12T18:00:00+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/696e3b500e0fb6073236d434_2%20X%20RFID%20Cards.png",
+          "width": 659,
+          "height": 672,
+          "alt": "Zynetic RFID card, front and back",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "text": "Goodies at the booth"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "Drop by for a free RFID card and more, while stocks last."
+            },
+            {
+              "type": "CHIPS",
+              "marginTop": 24,
+              "items": [
+                "RFID card",
+                "Tote bag",
+                "Cable organiser"
+              ]
+            },
+            {
+              "type": "CTA_GROUP",
+              "marginTop": 32,
+              "buttons": [
+                {
+                  "label": "Share",
+                  "style": "PRIMARY",
+                  "action": {
+                    "type": "SHARE",
+                    "text": "See you at EV World 2026 with Zynetic",
+                    "url": "https://play.google.com/store/apps/details?id=org.zynetic.zyneticae"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19-demos",
+      "templateId": "LIST_CARD",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Live demos today",
+      "availability": {
+        "from": "2026-11-10T00:00:00+04:00",
+        "until": "2026-11-12T18:00:00+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "At the booth today",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "size": 96,
+          "text": "Live demos."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "marginTop": 48,
+          "children": [
+            {
+              "type": "LIST",
+              "leading": "TIME",
+              "density": "REGULAR",
+              "items": [
+                {
+                  "leadingText": "11:00",
+                  "title": "Zynetic F1 walkthrough",
+                  "subtitle": "DC fast charging, up close"
+                },
+                {
+                  "leadingText": "13:00",
+                  "title": "The Zynetic app",
+                  "subtitle": "Find, start and pay in a few taps"
+                },
+                {
+                  "leadingText": "15:00",
+                  "title": "Fleet charging",
+                  "subtitle": "RFID cards and fleet reporting"
+                },
+                {
+                  "leadingText": "17:00",
+                  "title": "Z1 range",
+                  "subtitle": "AC charging for homes and workplaces"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "style": "NOTE",
+          "marginTop": 24,
+          "text": "Times may change on the day."
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "21-ceremony-rta",
+      "templateId": "PHOTO_ANNOUNCEMENT",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Signing with RTA",
+      "availability": {
+        "from": "2026-11-10T12:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://commons.wikimedia.org/w/thumb.php?f=Dubai_World_Trade_Centre_interior.jpg&w=1620",
+          "width": 1620,
+          "height": 2160,
+          "alt": "Inside Dubai World Trade Centre",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "Signing ceremony, Tuesday 10 November"
+            },
+            {
+              "type": "PARTNER_LOCKUP",
+              "marginTop": 8,
+              "separator": "×",
+              "left": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67b3fec5184a4749319ef8ed_Logo%20dark.svg",
+                "width": 130,
+                "height": 34,
+                "alt": "Zynetic",
+                "mime": "image/svg+xml"
+              },
+              "right": {
+                "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/RTA_Dubai_logo.png",
+                "width": 960,
+                "height": 260,
+                "alt": "Roads and Transport Authority"
+              }
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "size": 50,
+              "marginTop": 32,
+              "text": "Signing ceremony with the Roads and Transport Authority"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21-ceremony-ufc",
+      "templateId": "PHOTO_ANNOUNCEMENT",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Signing with United Foods",
+      "availability": {
+        "from": "2026-11-11T12:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://commons.wikimedia.org/w/thumb.php?f=Convention_Gate_BC7A0052.jpg&w=1620",
+          "width": 1620,
+          "height": 1080,
+          "alt": "Dubai World Trade Centre, Convention Gate",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "Signing ceremony, Wednesday 11 November"
+            },
+            {
+              "type": "PARTNER_LOCKUP",
+              "marginTop": 8,
+              "separator": "×",
+              "left": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67b3fec5184a4749319ef8ed_Logo%20dark.svg",
+                "width": 130,
+                "height": 34,
+                "alt": "Zynetic",
+                "mime": "image/svg+xml"
+              },
+              "right": {
+                "url": "https://www.unitedfoods.ae/wp-content/uploads/2023/05/united-foods-logo.png",
+                "width": 540,
+                "height": 210,
+                "alt": "United Foods"
+              }
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "size": 50,
+              "marginTop": 32,
+              "text": "Signing ceremony with United Foods"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21-ceremony-modern-bakery",
+      "templateId": "PHOTO_ANNOUNCEMENT",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Signing with Modern Bakery",
+      "availability": {
+        "from": "2026-11-11T12:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://assets-us-01.kc-usercontent.com/9440fe89-4371-0034-df95-ca61aae74cc3/150ceed5-5007-44a8-a673-6a53c6dd2833/4a2b35fef9d7d00e54355194b1c4d7b00036f3b0.webp",
+          "width": 1980,
+          "height": 1320,
+          "alt": "Dubai skyline and the Museum of the Future",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "Signing ceremony, Wednesday 11 November"
+            },
+            {
+              "type": "PARTNER_LOCKUP",
+              "marginTop": 8,
+              "separator": "×",
+              "left": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67b3fec5184a4749319ef8ed_Logo%20dark.svg",
+                "width": 130,
+                "height": 34,
+                "alt": "Zynetic",
+                "mime": "image/svg+xml"
+              },
+              "right": {
+                "url": "https://d1l8km4g5s76x5.cloudfront.net/Production/exb_doc/2041/47312/thumb_2041_47312_46438_2935.png",
+                "width": 600,
+                "height": 600,
+                "alt": "Modern Bakery"
+              }
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "size": 50,
+              "marginTop": 32,
+              "text": "Signing ceremony with Modern Bakery"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21-ceremony-unikai",
+      "templateId": "PHOTO_ANNOUNCEMENT",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Signing with Unikai",
+      "availability": {
+        "from": "2026-11-12T12:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad91651e5966d4e4a53_Taj%20Business%20Bay.jpg",
+          "width": 568,
+          "height": 622,
+          "alt": "Zynetic charger at Taj Business Bay",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "Signing ceremony, Thursday 12 November"
+            },
+            {
+              "type": "PARTNER_LOCKUP",
+              "marginTop": 8,
+              "separator": "×",
+              "left": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67b3fec5184a4749319ef8ed_Logo%20dark.svg",
+                "width": 130,
+                "height": 34,
+                "alt": "Zynetic",
+                "mime": "image/svg+xml"
+              },
+              "right": {
+                "url": "https://www.unikai.com/wp-content/themes/unikai/images/logo.png",
+                "width": 836,
+                "height": 127,
+                "alt": "Unikai"
+              }
+            },
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "size": 50,
+              "marginTop": 32,
+              "text": "Signing ceremony with Unikai"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22-day-1-summary",
+      "templateId": "STATS",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 1 in numbers",
+      "availability": {
+        "from": "2026-11-10T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Tuesday 10 November",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Day 1\nin numbers."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "marginTop": 48,
+          "padding": {
+            "top": 0,
+            "start": 56,
+            "end": 56,
+            "bottom": 36
+          },
+          "children": [
+            {
+              "type": "STAT_GRID",
+              "columns": 2,
+              "valueSize": 112,
+              "items": [
+                {
+                  "value": "480",
+                  "label": "visitors to the booth"
+                },
+                {
+                  "value": "312",
+                  "label": "RFID cards issued",
+                  "highlight": true
+                },
+                {
+                  "value": "36",
+                  "label": "live demos"
+                },
+                {
+                  "value": "18",
+                  "label": "meetings booked"
+                }
+              ]
+            },
+            {
+              "type": "HIGHLIGHT",
+              "marginTop": 32,
+              "imageHeight": 220,
+              "label": "Highlight of the day",
+              "value": "Signing ceremony with the Roads and Transport Authority",
+              "image": {
+                "url": "https://commons.wikimedia.org/w/thumb.php?f=Dubai_World_Trade_Centre_interior.jpg&w=1620",
+                "width": 1620,
+                "height": 2160,
+                "alt": "Inside Dubai World Trade Centre"
+              }
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "23-day-1-close",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Day 1 close",
+      "availability": {
+        "from": "2026-11-10T18:00:00+04:00",
+        "until": "2026-11-11T09:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8e18d3302636dab78_Dubai%20Bowling%20Center.jpg",
+          "width": 568,
+          "height": 621,
+          "alt": "Zynetic 80 kW DC charger at Dubai Bowling Center",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "text": "That's day 1"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "Thank you for stopping by. Doors open again at 10:00 tomorrow."
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22-day-2-summary",
+      "templateId": "STATS",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 2 in numbers",
+      "availability": {
+        "from": "2026-11-11T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Wednesday 11 November",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Day 2\nin numbers."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "marginTop": 48,
+          "padding": {
+            "top": 0,
+            "start": 56,
+            "end": 56,
+            "bottom": 36
+          },
+          "children": [
+            {
+              "type": "STAT_GRID",
+              "columns": 2,
+              "valueSize": 112,
+              "items": [
+                {
+                  "value": "510",
+                  "label": "visitors to the booth"
+                },
+                {
+                  "value": "330",
+                  "label": "RFID cards issued",
+                  "highlight": true
+                },
+                {
+                  "value": "35",
+                  "label": "live demos"
+                },
+                {
+                  "value": "22",
+                  "label": "meetings booked"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "23-day-2-close",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Day 2 close",
+      "availability": {
+        "from": "2026-11-11T18:00:00+04:00",
+        "until": "2026-11-12T09:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8b01d9be307e05449_Shada%20Hotel.jpg",
+          "width": 568,
+          "height": 622,
+          "alt": "Zynetic charger at Shada Hotel",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "text": "That's day 2"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "One more day. Doors open at 10:00 tomorrow."
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "Live from EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22-day-3-summary",
+      "templateId": "STATS",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "DURING",
+      "title": "Day 3 in numbers",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Thursday 12 November",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Day 3\nin numbers."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "marginTop": 48,
+          "padding": {
+            "top": 0,
+            "start": 56,
+            "end": 56,
+            "bottom": 36
+          },
+          "children": [
+            {
+              "type": "STAT_GRID",
+              "columns": 2,
+              "valueSize": 112,
+              "items": [
+                {
+                  "value": "430",
+                  "label": "visitors to the booth"
+                },
+                {
+                  "value": "288",
+                  "label": "RFID cards issued",
+                  "highlight": true
+                },
+                {
+                  "value": "33",
+                  "label": "live demos"
+                },
+                {
+                  "value": "21",
+                  "label": "meetings booked"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "Live from EV World 2026, Dubai World Trade Centre",
+          "end": "Booth C-09"
+        }
+      ]
+    },
+    {
+      "id": "23-day-3-close",
+      "templateId": "PHOTO_CAPTION",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "DURING",
+      "title": "Day 3 close",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-13T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8f80ba5668c61871f_The%20Manor%20by%20JA.jpg",
+          "width": 568,
+          "height": 621,
+          "alt": "Zynetic charger at The Manor by JA",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "H3",
+              "text": "That's a wrap on day 3"
+            },
+            {
+              "type": "TEXT",
+              "style": "LEDE",
+              "marginTop": 16,
+              "text": "Thank you for three brilliant days."
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "EV World 2026, Dubai World Trade Centre",
+              "end": "Booth C-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24-wrap",
+      "templateId": "COLLAGE",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "That's a wrap",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "EV World 2026",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "That's a wrap."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "COLLAGE",
+          "marginTop": 48,
+          "width": 936,
+          "height": 640,
+          "cornerRadius": 32,
+          "cells": [
+            {
+              "x": 0,
+              "y": 0,
+              "w": 560,
+              "h": 640,
+              "image": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad91651e5966d4e4a53_Taj%20Business%20Bay.jpg",
+                "width": 568,
+                "height": 622,
+                "alt": "Zynetic charger at Taj Business Bay",
+                "critical": true
+              }
+            },
+            {
+              "x": 584,
+              "y": 0,
+              "w": 352,
+              "h": 308,
+              "image": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8d2ca4199135e588b_Ramada%20Deira.jpg",
+                "width": 568,
+                "height": 622,
+                "alt": "Zynetic 120 kW DC charger at Ramada Deira"
+              }
+            },
+            {
+              "x": 584,
+              "y": 332,
+              "w": 352,
+              "h": 308,
+              "image": {
+                "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8e18d3302636dab78_Dubai%20Bowling%20Center.jpg",
+                "width": 568,
+                "height": 621,
+                "alt": "Zynetic 80 kW DC charger at Dubai Bowling Center"
+              }
+            }
+          ]
+        },
+        {
+          "type": "IMAGE",
+          "marginTop": 24,
+          "width": 936,
+          "height": 210,
+          "shape": "ROUNDED",
+          "cornerRadius": 32,
+          "image": {
+            "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67c84d0b8610f1a2c8ef9919_Teams%20image.png",
+            "width": 2496,
+            "height": 938,
+            "alt": "The Zynetic team"
+          }
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    },
+    {
+      "id": "25-three-days-in-numbers",
+      "templateId": "STATS",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "Three days in numbers",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "10–12 November 2026",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Three days\nin numbers."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "marginTop": 48,
+          "padding": {
+            "top": 0,
+            "start": 56,
+            "end": 56,
+            "bottom": 36
+          },
+          "children": [
+            {
+              "type": "STAT_GRID",
+              "columns": 2,
+              "valueSize": 112,
+              "items": [
+                {
+                  "value": "1,420",
+                  "label": "visitors to the booth"
+                },
+                {
+                  "value": "930",
+                  "label": "RFID cards issued",
+                  "highlight": true
+                },
+                {
+                  "value": "104",
+                  "label": "live demos"
+                },
+                {
+                  "value": "61",
+                  "label": "meetings booked"
+                }
+              ]
+            },
+            {
+              "type": "BAR_CHART",
+              "marginTop": 32,
+              "title": "Visitors by day",
+              "height": 250,
+              "barColor": "blue",
+              "bars": [
+                {
+                  "label": "Day 1",
+                  "value": 480,
+                  "display": "480"
+                },
+                {
+                  "label": "Day 2",
+                  "value": 510,
+                  "display": "510"
+                },
+                {
+                  "label": "Day 3",
+                  "value": 430,
+                  "display": "430"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    },
+    {
+      "id": "26-partner-wall",
+      "templateId": "LOGO_WALL",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "Four new partners",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Signed at EV World",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "Four new\npartners."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "LOGO_TILES",
+          "marginTop": 48,
+          "columns": 2,
+          "tileHeight": 204,
+          "items": [
+            {
+              "logo": {
+                "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/RTA_Dubai_logo.png",
+                "width": 960,
+                "height": 260,
+                "alt": "Roads and Transport Authority"
+              },
+              "caption": "RTA"
+            },
+            {
+              "logo": {
+                "url": "https://www.unitedfoods.ae/wp-content/uploads/2023/05/united-foods-logo.png",
+                "width": 540,
+                "height": 210,
+                "alt": "United Foods"
+              },
+              "caption": "United Foods"
+            },
+            {
+              "logo": {
+                "url": "https://d1l8km4g5s76x5.cloudfront.net/Production/exb_doc/2041/47312/thumb_2041_47312_46438_2935.png",
+                "width": 600,
+                "height": 600,
+                "alt": "Modern Bakery"
+              },
+              "caption": "Modern Bakery"
+            },
+            {
+              "logo": {
+                "url": "https://www.unikai.com/wp-content/themes/unikai/images/logo.png",
+                "width": 836,
+                "height": 127,
+                "alt": "Unikai"
+              },
+              "caption": "Unikai"
+            }
+          ]
+        },
+        {
+          "type": "TEXT",
+          "style": "LEDE",
+          "size": 30,
+          "marginTop": 32,
+          "text": "More chargers for **Dubai's fleets** and the people who drive them."
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    },
+    {
+      "id": "27-success-stories",
+      "templateId": "LIST_CARD",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "Success stories",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Who we charge",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "size": 96,
+          "text": "Success stories."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "marginTop": 48,
+          "children": [
+            {
+              "type": "LIST",
+              "leading": "LOGO",
+              "density": "COMPACT",
+              "items": [
+                {
+                  "leadingImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/RTA_Dubai_logo.png",
+                    "width": 960,
+                    "height": 260,
+                    "alt": "Roads and Transport Authority"
+                  },
+                  "title": "Roads and Transport Authority",
+                  "subtitle": "Public charging across Dubai"
+                },
+                {
+                  "leadingImage": {
+                    "url": "https://www.unitedfoods.ae/wp-content/uploads/2023/05/united-foods-logo.png",
+                    "width": 540,
+                    "height": 210,
+                    "alt": "United Foods"
+                  },
+                  "title": "United Foods",
+                  "subtitle": "Depot charging for delivery fleets"
+                },
+                {
+                  "leadingImage": {
+                    "url": "https://d1l8km4g5s76x5.cloudfront.net/Production/exb_doc/2041/47312/thumb_2041_47312_46438_2935.png",
+                    "width": 600,
+                    "height": 600,
+                    "alt": "Modern Bakery"
+                  },
+                  "title": "Modern Bakery",
+                  "subtitle": "Overnight charging for vans"
+                },
+                {
+                  "leadingImage": {
+                    "url": "https://www.unikai.com/wp-content/themes/unikai/images/logo.png",
+                    "width": 836,
+                    "height": 127,
+                    "alt": "Unikai"
+                  },
+                  "title": "Unikai",
+                  "subtitle": "Workplace charging"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    },
+    {
+      "id": "28-testimonial-1",
+      "templateId": "PHOTO_TESTIMONIAL",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "POST",
+      "title": "Testimonial, visitor",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad850fe167879e9f6aa_Al%20Owais%20Tower%20Al%20Barsha%201.jpg",
+          "width": 568,
+          "height": 622,
+          "alt": "Zynetic charger at Al Owais Tower, Al Barsha",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "What people said"
+            },
+            {
+              "type": "TESTIMONIAL",
+              "marginTop": 24,
+              "quote": "The app made charging feel simple. Tap, charge, done.",
+              "name": "Aisha K.",
+              "role": "EV driver, Dubai"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "EV World 2026, Dubai World Trade Centre",
+              "end": "Thank you, Dubai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28-testimonial-2",
+      "templateId": "PHOTO_TESTIMONIAL",
+      "templateVersion": 1,
+      "layout": "PHOTO",
+      "phase": "POST",
+      "title": "Testimonial, partner",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "IMAGE",
+        "image": {
+          "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67cffad8b4e19c3d717aef1a_Ramada%20Barsha%20Heights.jpg",
+          "width": 568,
+          "height": 622,
+          "alt": "Zynetic charger at Ramada Barsha Heights",
+          "critical": true
+        }
+      },
+      "header": {
+        "style": "GLASS"
+      },
+      "content": [
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "GLASS_PANEL",
+          "children": [
+            {
+              "type": "TEXT",
+              "style": "KICK",
+              "text": "What people said"
+            },
+            {
+              "type": "TESTIMONIAL",
+              "marginTop": 24,
+              "quote": "Our vans charge overnight and are ready every morning.",
+              "name": "Omar R.",
+              "role": "Fleet manager"
+            },
+            {
+              "type": "FOOTER_RAIL",
+              "onGlass": true,
+              "marginTop": 40,
+              "start": "EV World 2026, Dubai World Trade Centre",
+              "end": "Thank you, Dubai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29-rfid-steps",
+      "templateId": "LIST_CARD",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "Your card in three steps",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "art": [
+        {
+          "type": "DISC",
+          "x": 620,
+          "y": 200,
+          "w": 520,
+          "h": 520,
+          "color": "pale",
+          "pin": "TOP"
+        },
+        {
+          "type": "IMAGE",
+          "x": 700,
+          "y": 220,
+          "w": 328,
+          "h": 520,
+          "rotation": 8,
+          "fit": "FIT",
+          "align": "CENTER",
+          "pin": "TOP",
+          "image": {
+            "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/696e3b500e0fb6073236d434_2%20X%20RFID%20Cards.png",
+            "width": 659,
+            "height": 672,
+            "alt": "Zynetic RFID card, front and back",
+            "decorative": true
+          }
+        }
+      ],
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "KICK",
+          "text": "Got your card?",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "size": 96,
+          "maxWidth": 560,
+          "text": "Three steps\nto charge."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "marginTop": 48,
+          "children": [
+            {
+              "type": "LIST",
+              "leading": "NUMBER",
+              "density": "ROOMY",
+              "items": [
+                {
+                  "leadingText": "1",
+                  "title": "Open the Zynetic app",
+                  "subtitle": "Go to My RFID"
+                },
+                {
+                  "leadingText": "2",
+                  "title": "Add your card",
+                  "subtitle": "Enter the number printed on the back"
+                },
+                {
+                  "leadingText": "3",
+                  "title": "Tap to charge",
+                  "subtitle": "Hold the card to any Zynetic charger"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CTA_GROUP",
+          "marginTop": 36,
+          "buttons": [
+            {
+              "label": "Add your card",
+              "style": "PRIMARY",
+              "action": {
+                "type": "DEEP_LINK",
+                "uri": "zynetic://open/promotionalCard",
+                "analytics": {
+                  "name": "cta_add_rfid"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    },
+    {
+      "id": "30-whats-next",
+      "templateId": "HERO_SPEC",
+      "templateVersion": 1,
+      "layout": "CANVAS",
+      "phase": "POST",
+      "title": "What's next",
+      "availability": {
+        "from": "2026-11-12T18:00:00+04:00",
+        "until": "2026-11-30T23:59:59+04:00"
+      },
+      "background": {
+        "type": "SOLID",
+        "color": "canvas"
+      },
+      "art": [
+        {
+          "type": "DISC",
+          "x": 520,
+          "y": 700,
+          "w": 780,
+          "h": 780,
+          "color": "pale",
+          "pin": "BOTTOM"
+        },
+        {
+          "type": "IMAGE",
+          "x": 660,
+          "y": 720,
+          "w": 367,
+          "h": 800,
+          "fit": "FIT",
+          "align": "BOTTOM_CENTER",
+          "pin": "BOTTOM",
+          "image": {
+            "url": "https://cdn.prod.website-files.com/652f7574d41564b66c258ec7/67c84a00275e1308c3fb7753_cHARGER.png",
+            "width": 897,
+            "height": 760,
+            "alt": "Zynetic DC fast chargers, 60 kW to 180 kW",
+            "critical": true,
+            "decorative": true
+          }
+        }
+      ],
+      "content": [
+        {
+          "type": "TEXT",
+          "style": "H1",
+          "text": "What's next\nfor Zynetic.",
+          "marginTop": 64
+        },
+        {
+          "type": "TEXT",
+          "style": "LEDE",
+          "maxWidth": 560,
+          "marginTop": 36,
+          "text": "More chargers, more partners, and an app that keeps getting better."
+        },
+        {
+          "type": "SPACER"
+        },
+        {
+          "type": "CARD",
+          "padding": "FLUSH",
+          "width": 560,
+          "children": [
+            {
+              "type": "KV_LIST",
+              "variant": "STACKED",
+              "rows": [
+                {
+                  "label": "Partners",
+                  "value": "4 new signings"
+                },
+                {
+                  "label": "Network",
+                  "value": "Growing across the UAE"
+                },
+                {
+                  "label": "App",
+                  "value": "Zynetic for iOS and Android"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "CTA_GROUP",
+          "marginTop": 36,
+          "buttons": [
+            {
+              "label": "Share",
+              "style": "PRIMARY",
+              "action": {
+                "type": "SHARE",
+                "text": "See you at EV World 2026 with Zynetic",
+                "url": "https://play.google.com/store/apps/details?id=org.zynetic.zyneticae"
+              }
+            },
+            {
+              "label": "Done",
+              "style": "GHOST",
+              "action": {
+                "type": "CLOSE"
+              }
+            }
+          ]
+        },
+        {
+          "type": "FOOTER_RAIL",
+          "marginTop": 36,
+          "start": "EV World 2026, Dubai World Trade Centre",
+          "end": "Thank you, Dubai"
+        }
+      ]
+    }
+  ],
+  "version": 7
+}
