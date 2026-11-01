@@ -22,18 +22,27 @@ DATA_DIR=/path/to/your/json npm run dev
 
 ## What you can do
 
+The editor works from phone width up. On wide screens it is three columns (frames · form ·
+preview); on laptops the preview opens as a sheet from the **Preview** button; on phones the
+frame list is a drawer behind the ☰ button. Form labels sit beside their inputs when there is
+room and above them when there is not.
+
 - **Campaign** panel: id, title, subtitle, priority, locale, live window, cover, defaults, theme.
-- **Frames** sidebar: filter, select, add, duplicate, delete, reorder (↑/↓). Frames with
-  validation problems show a red count.
-- **Frame** editor: identity fields with suggestions for `templateId` / `layout` / `phase`,
-  date-time pickers for availability (keeps the `+04:00` offset), background, optional header
-  override and art layers, and the **content blocks**:
-  - each block is a collapsible row with its type, style and a text summary;
-  - reorder, duplicate, remove;
-  - **+ Add block** offers a starter template for every known block type
-    (`TEXT`, `IMAGE`, `CTA_GROUP`, `KV_LIST`, `STAT_GRID`, `GLASS_PANEL`, …);
-  - inside a block every field is editable; add/remove/rename fields, change a field's type,
-    reorder array items. `CARD.children` / `GLASS_PANEL.children` use the same block editor.
+- **Frames** sidebar: filter, select, add; frames with validation problems show a red count.
+  Move a frame with ↑/↓ in the frame header, duplicate or delete it from the frame's ⋯ menu.
+- **Frame** editor, three tabs:
+  - **Content** — just the things people change: copy, labels, values, images, list rows,
+    buttons, grouped per block (and per child block inside cards and glass panels). Layout and
+    style props are left out of this view. Images are a compact field (URL with thumbnail, alt,
+    width × height, "read size from image").
+  - **Structure** — the full tree: background, header override, art layers and every content
+    block with all of its properties. Blocks collapse to a one-line summary; reorder, duplicate,
+    remove, and **+ Add block** with a starter template for every block type in the catalogue.
+    Each row has a ⋯ menu to rename the field, change its type or remove it.
+  - **Settings** — id, title, template, layout, phase, availability window (single input with a
+    native date-time picker that keeps the `+04:00` offset), duration and renderer version.
+- **Click a block in the preview** to jump to it in the form (it scrolls into view and
+  highlights). Works in the side pane and in the preview sheet.
 - **Preview** (right column, wide screens): renders the selected frame the way the app's Compose
   renderer does (see `ev-world-stories-sdui-api-design`, §3, §4, §6, §12):
   - 1080-du artboard scaled to fit; z-order background → pinned art → content column

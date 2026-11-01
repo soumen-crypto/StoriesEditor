@@ -44,7 +44,7 @@ function Home() {
       ) : (
         <ul className="grid gap-3">
           {files.map((f) => (
-            <li key={f.name} className="card flex items-center justify-between gap-4 p-4">
+            <li key={f.name} className="card flex flex-wrap items-center justify-between gap-3 p-4">
               <div className="min-w-0">
                 <Link to="/edit/$file" params={{ file: f.name }} className="font-medium text-sky-700 hover:underline">
                   {f.name}

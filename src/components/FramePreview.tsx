@@ -81,6 +81,11 @@ interface Theme {
 
 const ThemeCtx = createContext<Theme>({ colors: TOKENS, extraDu: 0, now: new Date() })
 
+/** Path of the block being rendered (for click-to-select) and the selection callbacks. */
+type Path = Array<string | number>
+const PathCtx = createContext<Path>([])
+const SelectCtx = createContext<{ onSelect?: (path: Path) => void; selected?: string }>({})
+
 function useColor() {
   const t = useContext(ThemeCtx)
   return (ref: unknown, fallback = 'ink'): string => {
@@ -254,10 +259,36 @@ function alignSelf(v: unknown): CSSProperties['alignSelf'] {
 
 /** Common block props (§6.0): marginTop, width, maxWidth, align. */
 function Wrap({ b, children, style }: { b: JsonObject; children: ReactNode; style?: CSSProperties }) {
+  const path = useContext(PathCtx)
+  const sel = useContext(SelectCtx)
+  const color = useColor()
   const w = b.width !== undefined ? num(b.width) : undefined
   const align = alignSelf(b.align) ?? (w !== undefined || b.maxWidth !== undefined ? 'flex-start' : undefined)
+  const selected = sel.selected !== undefined && sel.selected === path.join('.')
   return (
-    <div style={{ marginTop: num(b.marginTop), width: w, maxWidth: b.maxWidth !== undefined ? num(b.maxWidth) : undefined, alignSelf: align, flexShrink: 0, minWidth: 0, ...style }}>
+    <div
+      style={{
+        marginTop: num(b.marginTop),
+        width: w,
+        maxWidth: b.maxWidth !== undefined ? num(b.maxWidth) : undefined,
+        alignSelf: align,
+        flexShrink: 0,
+        minWidth: 0,
+        cursor: sel.onSelect ? 'pointer' : undefined,
+        outline: selected ? `6px solid ${color('blue')}` : undefined,
+        outlineOffset: 10,
+        borderRadius: selected ? 8 : undefined,
+        ...style,
+      }}
+      onClick={
+        sel.onSelect
+          ? (e) => {
+              e.stopPropagation()
+              sel.onSelect!(path)
+            }
+          : undefined
+      }
+    >
       {children}
     </div>
   )
@@ -952,9 +983,16 @@ function Unknown({ b }: BlockProps) {
   )
 }
 
-export function Block({ block, onGlass = false }: { block: Json; onGlass?: boolean }) {
+export function Block({ block, onGlass = false, path = [] }: { block: Json; onGlass?: boolean; path?: Path }) {
   if (!isObject(block)) return null
-  const b = block
+  return (
+    <PathCtx.Provider value={path}>
+      <BlockInner b={block} onGlass={onGlass} path={path} />
+    </PathCtx.Provider>
+  )
+}
+
+function BlockInner({ b, onGlass, path }: { b: JsonObject; onGlass: boolean; path: Path }) {
   const p = { b, onGlass }
   switch (b.type) {
     case 'SPACER':
@@ -970,13 +1008,13 @@ export function Block({ block, onGlass = false }: { block: Json; onGlass?: boole
     case 'CARD':
       return (
         <Card {...p}>
-          {Array.isArray(b.children) && b.children.map((c, i) => <Block key={i} block={c} onGlass={false} />)}
+          {Array.isArray(b.children) && b.children.map((c, i) => <Block key={i} block={c} onGlass={false} path={[...path, 'children', i]} />)}
         </Card>
       )
     case 'GLASS_PANEL':
       return (
         <GlassPanel {...p}>
-          {Array.isArray(b.children) && b.children.map((c, i) => <Block key={i} block={c} onGlass />)}
+          {Array.isArray(b.children) && b.children.map((c, i) => <Block key={i} block={c} onGlass path={[...path, 'children', i]} />)}
         </GlassPanel>
       )
     case 'KV_LIST':
@@ -1065,9 +1103,14 @@ export interface FramePreviewProps {
   frameIndex?: number
   frameCount?: number
   now?: Date
+  /** Document path of `frame.content`, used to report clicked blocks. */
+  basePath?: Path
+  onBlockClick?: (path: Path) => void
+  /** Path key (joined with '.') of the block to highlight. */
+  selectedPath?: string
 }
 
-export function FramePreview({ frame, story, width = 300, artboardHeight = ARTBOARD_H, showChrome = true, frameIndex = 0, frameCount = 1, now }: FramePreviewProps) {
+export function FramePreview({ frame, story, width = 300, artboardHeight = ARTBOARD_H, showChrome = true, frameIndex = 0, frameCount = 1, now, basePath = [], onBlockClick, selectedPath }: FramePreviewProps) {
   const scale = width / ARTBOARD_W
   const artH = Math.max(ARTBOARD_H, artboardHeight)
   const overrides = story && isObject(story.theme) && isObject(story.theme.colors) ? story.theme.colors : {}
@@ -1082,6 +1125,7 @@ export function FramePreview({ frame, story, width = 300, artboardHeight = ARTBO
 
   return (
     <ThemeCtx.Provider value={theme}>
+    <SelectCtx.Provider value={{ onSelect: onBlockClick, selected: selectedPath }}>
       <div style={{ width, height: artH * scale, position: 'relative', overflow: 'hidden', borderRadius: 28, boxShadow: '0 1px 2px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06)', background: colors.canvas }}>
         <div
           style={{
@@ -1101,11 +1145,12 @@ export function FramePreview({ frame, story, width = 300, artboardHeight = ARTBO
           <ArtLayer art={frame.art} />
           <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'stretch', padding: `${PAD_TOP}px ${PAD_SIDE}px ${PAD_BOTTOM}px`, boxSizing: 'border-box' }}>
             <Header header={header} logo={defaultHeader?.logo} />
-            {Array.isArray(frame.content) && frame.content.map((b, i) => <Block key={i} block={b} />)}
+            {Array.isArray(frame.content) && frame.content.map((b, i) => <Block key={i} block={b} path={[...basePath, i]} />)}
           </div>
           {showChrome && <Chrome index={frameIndex} count={frameCount} title={story ? str(story.title) : ''} cover={story?.cover} light={photo} />}
         </div>
       </div>
+    </SelectCtx.Provider>
     </ThemeCtx.Provider>
   )
 }

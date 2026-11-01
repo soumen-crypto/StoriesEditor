@@ -5,41 +5,159 @@
 }
 
 html, body {
-  @apply bg-zinc-100 text-zinc-900 antialiased;
+  @apply bg-zinc-50 text-zinc-900 antialiased;
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
-input[type="text"], input[type="number"], input[type="url"], input[type="datetime-local"], textarea, select {
-  @apply w-full rounded-md border border-zinc-300 bg-white px-2 py-1 text-sm text-zinc-900 shadow-sm outline-none;
+/* Component classes live in the components layer so Tailwind utilities (hidden, md:flex, !w-16) still win. */
+@layer components {
+/* Controls -------------------------------------------------------------- */
+.input {
+  @apply block w-full min-w-0 rounded-md border border-zinc-300 bg-white px-2.5 py-1.5 text-sm text-zinc-900 shadow-xs outline-none placeholder:text-zinc-400;
 }
-input:focus-visible, textarea:focus-visible, select:focus-visible {
-  @apply border-sky-500 ring-2 ring-sky-200;
+.input:focus-visible {
+  @apply border-sky-500 ring-2 ring-sky-100;
 }
-textarea {
-  @apply font-mono leading-snug;
+textarea.input {
+  @apply leading-snug;
   field-sizing: content;
-  min-height: 2rem;
+  width: 100%;
+  max-width: 100%;
+  min-height: 2.25rem;
+  max-height: 18rem;
+}
+select.input {
+  @apply pr-7;
+}
+.input-mono {
+  @apply font-mono text-[13px];
+}
+input[type="checkbox"] {
+  @apply h-4 w-4 accent-zinc-900;
 }
 
 .btn {
-  @apply inline-flex items-center gap-1 rounded-md border border-zinc-300 bg-white px-2.5 py-1 text-xs font-medium text-zinc-700 shadow-sm hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-50;
+  @apply inline-flex h-8 shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-md border border-zinc-300 bg-white px-2.5 text-xs font-medium text-zinc-700 shadow-xs hover:bg-zinc-50 disabled:cursor-not-allowed disabled:opacity-40;
 }
 .btn-primary {
   @apply border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800;
 }
 .btn-danger {
-  @apply border-red-200 text-red-700 hover:bg-red-50;
+  @apply text-red-700 hover:bg-red-50;
+}
+.btn-ghost {
+  @apply border-transparent bg-transparent shadow-none hover:bg-zinc-100;
 }
 .btn-icon {
-  @apply h-6 w-6 justify-center px-0 text-zinc-500 hover:text-zinc-900;
+  @apply w-8 px-0 text-zinc-500 hover:text-zinc-900;
 }
+.btn-sm {
+  @apply h-7 px-2 text-[11px];
+}
+.btn-sm.btn-icon {
+  @apply w-7;
+}
+
 .chip {
   @apply inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide;
 }
 .card {
-  @apply rounded-lg border border-zinc-200 bg-white shadow-sm;
+  @apply rounded-xl border border-zinc-200 bg-white shadow-xs;
 }
-.json-row {
-  @apply grid items-start gap-2;
-  grid-template-columns: minmax(7rem, 11rem) minmax(0, 1fr) auto;
+.menu {
+  @apply absolute right-0 z-30 mt-1 min-w-40 overflow-hidden rounded-lg border border-zinc-200 bg-white py-1 text-sm shadow-lg;
+}
+.menu-item {
+  @apply flex w-full items-center gap-2 px-3 py-1.5 text-left text-xs text-zinc-700 hover:bg-zinc-100 disabled:opacity-40;
+}
+.menu-sep {
+  @apply my-1 border-t border-zinc-100;
+}
+
+/* Forms: label beside the control when the container is wide, above it when not. */
+.form {
+  container-type: inline-size;
+  container-name: form;
+}
+.form section,
+.form .item-card,
+.form .field,
+.form .group,
+.form .field-control {
+  min-width: 0;
+}
+.field {
+  @apply grid items-start gap-x-3 gap-y-1;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+.field-label {
+  @apply truncate text-xs font-medium text-zinc-600;
+  grid-column: 1 / -1;
+}
+.field-label .hint {
+  @apply ml-1.5 font-normal text-zinc-400;
+}
+.field-control {
+  @apply min-w-0;
+}
+.field-menu {
+  @apply flex items-start gap-1;
+}
+.field-menu:empty {
+  display: none;
+}
+@container form (min-width: 34rem) {
+  .field {
+    grid-template-columns: 9.5rem minmax(0, 1fr) auto;
+  }
+  .field-label {
+    grid-column: auto;
+    padding-top: 0.45rem;
+  }
+}
+
+.group {
+  @apply border-l-2 border-zinc-200 pl-3;
+}
+.item-card {
+  @apply rounded-lg border border-zinc-200 bg-white;
+}
+.item-head {
+  @apply flex items-center gap-2 px-2 py-1.5 text-xs text-zinc-600;
+}
+
+/* Datetime picker trigger: the native input stays in the DOM for showPicker() but is invisible. */
+.picker-hidden {
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-item {
+  @apply flex w-full items-start gap-2 border-b border-zinc-100 px-3 py-2 text-left hover:bg-zinc-50;
+}
+.sidebar-item.active {
+  @apply bg-sky-50;
+}
+
+.tabs {
+  @apply flex gap-1 rounded-lg bg-zinc-100 p-1;
+}
+.tab {
+  @apply flex-1 rounded-md px-3 py-1.5 text-center text-xs font-medium text-zinc-600 hover:text-zinc-900;
+}
+.tab.active {
+  @apply bg-white text-zinc-900 shadow-xs;
+}
+
+.flash {
+  animation: flash 1.6s ease-out;
+}
+@keyframes flash {
+  0% { box-shadow: 0 0 0 3px rgb(14 165 233 / 0.6); }
+  100% { box-shadow: 0 0 0 3px rgb(14 165 233 / 0); }
+}
 }
