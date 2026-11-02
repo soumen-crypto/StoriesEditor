@@ -5,6 +5,17 @@ A local web app for editing the story/campaign JSON files (e.g. `evw26-event.jso
 Tailwind CSS and Zod. Server functions read and write the files on disk, so saving in the
 browser updates the file directly — no copy/paste.
 
+## Screenshots
+
+Taken from the running app at desktop, laptop and phone widths (the sandbox they were captured
+in had no access to the image CDNs, so photos and logos show their placeholder colour).
+
+| | |
+|---|---|
+| **Files** — the JSON files in `data/` ![Files](docs/screenshots/home.png) | **Content tab** — copy, values and images per block, with the live preview ![Content](docs/screenshots/desktop-content.png) |
+| **Structure tab** — the full block tree with every property ![Structure](docs/screenshots/desktop-structure.png) | **Settings tab** — identity, availability, playback ![Settings](docs/screenshots/desktop-settings.png) |
+| **Laptop** — the preview opens as a sheet ![Preview sheet](docs/screenshots/laptop-preview-sheet.png) | **Phone** — stacked form and the frame drawer ![Phone](docs/screenshots/phone-content.png) ![Drawer](docs/screenshots/phone-frames.png) |
+
 ## Run it
 
 ```bash
